@@ -16,14 +16,24 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              child: Image(
-                image: AssetImage("Images/qa.png"),
-                width: 100,
-                height: 100,
-                fit: BoxFit.contain,
-              ),
-              margin: EdgeInsets.only(top: 20),
-              padding: EdgeInsets.only(top: 30, left: 10, right: 10),
+              height: 150.0,
+              width: 150.0,
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(30),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("Images/qa.png"),
+                  ),
+                  border: Border.all(color: Colors.grey, width: 10),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.brown,
+                        blurRadius: 18,
+                        offset: Offset(4, 4),
+                        spreadRadius: 5),
+                  ]),
             ),
             Container(
               child: Text(
@@ -37,34 +47,46 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 180,
-                      height: 90,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.cyanAccent,
+                    child: TextButton(
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 180,
+                        height: 90,
+                        decoration: BoxDecoration(boxShadow: [
+                          BoxShadow(
+                              color: Colors.cyanAccent,
+                              blurRadius: 8,
+                              offset: Offset(4, 4),
+                              spreadRadius: 5),
+                        ]),
+                        child: Text(
+                          "This is Answer 1",
+                          style: TextStyle(
+                              color: Colors.black,fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      child: Text(
-                        "This is Answer 1",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
+                      onPressed: (){},
                     ),
                   ),
                   SizedBox(width: 20),
                   Expanded(
-                      child: Container(
-                          alignment: Alignment.center,
-                          width: 180,
-                          height: 90,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            color: Colors.cyanAccent,
-                          ),
-                          child: Text("This is Answer 2",
-                              style: TextStyle(
-                                  fontSize: 20, fontWeight: FontWeight.bold)))),
+                      child: TextButton(
+                        child: Container(
+                            alignment: Alignment.center,
+                            width: 180,
+                            height: 90,
+                            decoration: BoxDecoration(boxShadow: [
+                              BoxShadow(
+                                  color: Colors.cyanAccent,
+                                  blurRadius: 8,
+                                  offset: Offset(4, 4),
+                                  spreadRadius: 5),
+                            ]),
+                            child: Text("This is Answer 2",
+                                style: TextStyle(
+                                   color: Colors.black ,fontSize: 20, fontWeight: FontWeight.bold))),
+                        onPressed: (){},
+                      )),
                 ],
               ),
               margin: EdgeInsets.only(top: 20, left: 10, right: 10),
@@ -73,62 +95,49 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 180,
-                      height: 90,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.cyanAccent,
+                    child: TextButton(
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: 180,
+                        height: 90,
+                        decoration: BoxDecoration(boxShadow: [
+                          BoxShadow(
+                              color: Colors.cyanAccent,
+                              blurRadius: 8,
+                              offset: Offset(4, 4),
+                              spreadRadius: 5),
+                        ]),
+                        child: Text(
+                          "This is Answer 3",
+                          style: TextStyle(
+                              color: Colors.black,fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
                       ),
-                      child: Text(
-                        "This is Answer 3",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
+                      onPressed: (){},
                     ),
                   ),
                   SizedBox(width: 20),
                   Expanded(
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 180,
-                      height: 90,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.cyanAccent,
-                      ),
-                      child: Text(
-                        "This is Answer 4",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
+                      child: TextButton(
+                        child: Container(
+                            alignment: Alignment.center,
+                            width: 180,
+                            height: 90,
+                            decoration: BoxDecoration(boxShadow: [
+                              BoxShadow(
+                                  color: Colors.cyanAccent,
+                                  blurRadius: 8,
+                                  offset: Offset(4, 4),
+                                  spreadRadius: 5),
+                            ]),
+                            child: Text("This is Answer 4",
+                                style: TextStyle(
+                                    color: Colors.black ,fontSize: 20, fontWeight: FontWeight.bold))),
+                        onPressed: (){},
+                      )),
                 ],
               ),
               margin: EdgeInsets.only(top: 20, left: 10, right: 10),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              padding: EdgeInsets.only(left: 40, right: 40),
-              alignment: Alignment.center,
-              width: RenderErrorBox.minimumWidth,
-              height: 70,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-              ),
-              child:
-              ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  "Submit",
-                  style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-              ),
             ),
           ],
         ),

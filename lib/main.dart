@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_apps/screens/HomeScreen.dart';
+import 'package:flutter_apps/screens/ShowListView.dart';
 
 void main() {
   runApp(MyAppData());
@@ -14,7 +14,7 @@ class MyAppData extends StatelessWidget {
       title: "NewApp",
       theme: ThemeData.light(),
       debugShowCheckedModeBanner: false,
-      home:HomeScreen()
+      home:ShowListView()
     );
   }
 }
